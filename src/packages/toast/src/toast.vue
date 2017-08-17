@@ -1,16 +1,16 @@
 <<template>
-  <div class="text-toast" :class="isShow"><div class="text-toast-content">{{toastText}}</div></div>
+  <div class="text-toast" :class="isShow"><div class="text-toast-content">{{text}}</div></div>
 </template>
 
 <script>
 export default {
     name: "Toast",
 
-    props: ["toastText", "showToast"],
+    props: ["text", "show"],
 
     computed: {
         isShow() {
-            return this.showToast ? "text-toast-on" : "";
+            return this.show ? "text-toast-on" : "";
         }
     },
     mounted() {
@@ -20,10 +20,6 @@ export default {
             that.$parent.toastText = '';
             that.$parent.showToast = false;
         }, false);
-
-        // this.$el.addEventListener('animationend', function (ev) {
-        //     console.log(ev.type)
-        // }, false);
     }
 }
 </script>

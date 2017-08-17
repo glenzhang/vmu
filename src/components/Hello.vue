@@ -1,38 +1,49 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-  
-    <Toast :toastText="toastText" :showToast="showToast"></Toast>
+    <Toast :text="toastText" :show="showToast"></Toast>
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import Toast from '@/packages/toast';
+// import Toast from '@/packages/toast';
 
-Vue.use(Toast);
+// Vue.use(Toast);
 
 export default {
   name: 'hello',
-  data () {
+  data() {
     return {
       msg: 'Welcome to Your Vue.js App',
       toastText: 'Welcome to Your Vue.js App',
-      showToast: true
+      showToast: false
     }
   },
+
+  methods: {
+    showToast1(text) {
+      this.toastText = text;
+      this.showToast = true;
+    }
+  },
+
   mounted() {
     setTimeout(() => {
-      this.toastText = "5s后的值";
-      this.showToast = true;
-    } , 5000)
+      // this.toastText = "5s后的值";
+      // this.showToast = true;
+
+      this.showToast1("5s后的值");
+
+    }, 5000)
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 

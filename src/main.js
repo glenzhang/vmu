@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Toast from '@/packages/toast'
+
+Vue.use(Toast);
 
 Vue.config.productionTip = false
 
