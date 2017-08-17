@@ -27,7 +27,7 @@ export default {
 <style scoped lang="less">
 .text-toast {
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
     left: 0;
     top: 50%;
     width: 100%;
