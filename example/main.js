@@ -3,9 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Toast from '@/packages/toast'
+import vmu from '../src'
 
-Vue.use(Toast);
+Vue.use(vmu);
 
 Vue.config.productionTip = false
 
