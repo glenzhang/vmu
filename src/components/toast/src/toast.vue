@@ -1,5 +1,5 @@
 <<template>
-  <div class="text-toast" :class="isShow"><div class="text-toast-content">{{text}}</div></div>
+  <div class="vmu-text-toast" :class="isShow"><div class="vmu-text-toast-content">{{text}}</div></div>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
 
     computed: {
         isShow() {
-            return this.show ? "text-toast-on" : "";
+            return this.show ? "vmu-text-toast-on" : "";
         }
     },
     mounted() {
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-.text-toast {
+.vmu-text-toast {
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -42,7 +42,7 @@ export default {
     -webkit-transform: translateY(-10000px);
 }
 
-.text-toast-content {
+.vmu-text-toast-content {
     display: inline-block;
     margin: 0 5%;
     padding: 10px 20px;
@@ -53,7 +53,7 @@ export default {
     border-radius: 3px;
 }
 
-@-webkit-keyframes text-toast-on {
+@-webkit-keyframes vmu-text-toast-on {
     0% {
         opacity: 0;
         -webkit-transform: translateY(20px);
@@ -76,7 +76,7 @@ export default {
     }
 }
 
-@keyframes text-toast-on {
+@keyframes vmu-text-toast-on {
     0% {
         opacity: 0;
         transform: translateY(20px);
@@ -99,7 +99,7 @@ export default {
     }
 }
 
-.text-toast-on {
+.vmu-text-toast-on {
     -webkit-animation-name: text-toast-on;
     animation-name: text-toast-on;
 }
