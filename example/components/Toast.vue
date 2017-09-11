@@ -1,11 +1,9 @@
 <template>
-  <Toast :text="toastText" :show="showToast">
-  </Toast>
+  <vmu-toast :text="toastText" :show="showToast">
+  </vmu-toast>
 </template>
 
 <script>
-import Vue from 'vue';
-
 export default {
   data() {
     return {

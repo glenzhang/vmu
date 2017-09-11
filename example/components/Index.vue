@@ -5,6 +5,9 @@
         <li>
           <router-link to="/toast">Toast</router-link>
         </li>
+        <li>
+          <router-link to="/togglepanel">TogglePanel</router-link>
+        </li>
     </ul>
   </div>
 </template>

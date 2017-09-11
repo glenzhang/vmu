@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: "Toast",
+    name: "VmuToast", //此处需要加入Vmu前缀，防止和其他库冲突，使用<vmu-toast></vmu-toast>
 
     props: ["text", "show"],
 
@@ -14,11 +14,9 @@ export default {
         }
     },
     mounted() {
-        var that = this;
-
-        this.$el.addEventListener('webkitAnimationEnd', function (ev) {
-            that.$parent.toastText = '';
-            that.$parent.showToast = false;
+        this.$el.addEventListener('webkitAnimationEnd', (ev) => {
+            this.$parent.toastText = '';
+            this.$parent.showToast = false;
         }, false);
     }
 }
