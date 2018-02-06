@@ -1,33 +1,20 @@
 <template>
-  <vmu-toast :text="toastText" :show="showToast">
-  </vmu-toast>
+  <button @click="openToast" >打开Toast</button>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      toastText: 'Welcome to Your Vue.js App',
-      showToast: true
-    }
+      toastText: "Welcome to Your Vue.js App"
+    };
   },
 
   methods: {
-    openToast(text) {
-      this.toastText = text;
-      this.showToast = true;
+    openToast() {
+      //console.log(this.$toast);
+      this.$toast(this.toastText);
     }
-  },
-
-  mounted() {
-    let self = this;
-    setTimeout(() => {
-      self.openToast("5s后的值");
-    }, 5000)
   }
-}
+};
 </script>
-
-<style scoped>
-
-</style>

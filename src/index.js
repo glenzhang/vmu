@@ -1,18 +1,21 @@
-import Toast from './components/toast';
-import TogglePanel from './components/togglepanel';
+import Vue from 'vue';
+import SingleHelper from './util/singlehelper';
+import Toast from '../packages/toast';
 
 const vmu = {
-    Toast,
-    TogglePanel
+
 };
 
 const install = function(Vue, opts = {}) {
     if (install.installed) {
         return;
     }
+
     Object.keys(vmu).forEach((key) => {
         Vue.component(vmu[key].name, vmu[key]);
     });
+
+    Vue.prototype.$toast = SingleHelper.toast;
 };
 
 //主动注册
